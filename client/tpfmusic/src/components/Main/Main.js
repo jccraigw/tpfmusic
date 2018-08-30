@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 // https://github.com/ReactTraining/react-router/blob/master/docs/API.md#link
 import { Link } from "react-router";
 import './Main.css';
+import Search from "../Search/Search.js";
 
 
 // Create the Main component
@@ -33,11 +34,12 @@ class Main extends Component {
                             <div className="collapse navbar-collapse">
                                 <ul className="nav navbar-nav navbar-right">
                                     {/* Using <Link> in place of <a> and "to" in place of "href" */}
-                                    <li><Link to="/search">Search</Link></li>
-                                    <li><Link to="/saved">Placeholder</Link></li>
-                                    <li><Link to="/saved">Placeholder</Link></li>
-                                    <li><Link to="/saved">Placeholder</Link></li>
-                                    <li><Link to="/saved">Placeholder</Link></li>
+                                    {/*<li><Link to="/search">Search</Link></li>*/}
+                                    <li><Link to="/artists">Artists</Link></li>
+                                    <li><Link to="/shows">Shows</Link></li>
+                                    <li><Link to="/parties">Parties</Link></li>
+                                    <li><Link to="/contact">Contact</Link></li>
+                                    <li><Link to="/about">AboutUs</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -50,6 +52,7 @@ class Main extends Component {
                     </div>
                     {/* Here we will deploy the sub components (Search or Saved */}
                     {/* These sub-components are getting passed as this.props.children */}
+                    {}
                     {this.props.children}
                     <footer>
                         <hr />

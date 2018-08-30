@@ -1,4 +1,4 @@
-// Include React as a dependency
+ // Include React as a dependency
 import React, { Component } from 'react'
 
 // Include the Query and Results components
@@ -6,10 +6,10 @@ import React, { Component } from 'react'
 // import Results from "./Search/Results";
 
 // Include the helpers for making API calls
-import helpers from "../utils/helpers";
+//import helpers from "../utils/helpers";
 
-// Create the Search component
-class Search extends Component {
+// Create the Parties component
+class Parties extends Component {
   // Here we set the initial state variables
   // (this allows us to propagate the variables for maniuplation by the children components
   // Also note the "resuls" state. This will be where we hold the data from our results
@@ -36,11 +36,11 @@ class Search extends Component {
         {/* <Query updateSearch={this.setQuery} />*/}
         {/* Note how we pass in the results into this component */}
          {/*<Results results={this.state.results} />*/}
-         <h1>********* SEARCH WORKING</h1>
+         <h1>********* PARTIES WORKING</h1>
       </div>
     );
   }
 };
 
 // Export the module back to the route
-export default Search;
+export default Parties;
