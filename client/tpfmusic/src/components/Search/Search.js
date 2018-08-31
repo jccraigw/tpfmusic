@@ -1,4 +1,4 @@
-// Include React as a dependency
+ // Include React as a dependency
 import React, { Component } from 'react'
 
 // Include the Query and Results components

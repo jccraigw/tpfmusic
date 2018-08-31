@@ -4,10 +4,72 @@
     margin-right: 0px;
     margin-left: 0px;
     width: 100%;
+    height: 100%;
 }
 @media (min-width: 768px){
     .navbar {
-        border-radius: 0px; 
+        border-radius: 0px;
+
+    }
+    .container-fluid{
+        margin: 0 auto;
+        width: 50%;
+
+        
+    }
+    .nav{
+        margin-right: 55px;
     }
 }
+.main-body-container{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #333;
+    margin-top: -21px;
+    height: 100%;
+    /* The image used */
+/*    background-image: url('https://images.unsplash.com/photo-1529432337323-223e988a90fb?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=liliana-pereira-708261-unsplash.jpg&s=6d5c8bfe7321372af3869922629d026e,');
+*/
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar{
+    width:100%;
+    background-color: #000000;
+    border-top: 1px solid #333;
 
+/*    position:fixed;
+    top:0px;*/
+
+}
+.carousel{
+    margin: 0 auto;
+    width: 90%;
+    height: 500px;
+    background-color: #000000;
+    opacity: .9;
+    top:50px;
+    border-bottom: 1px solid #333;
+
+
+}
+.lastestMusic{
+    margin: 0 auto;
+    width: 90%;
+    height: 500px;
+    background-color: #000000;
+    opacity: .9;
+    margin-top: 50px;
+}
+.landpage-header{
+    color:#ffffff;
+    background-color: #000000;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    font-size: 35px;
+    height: 100px;
+    line-height: 100px;
+    vertical-align: middle;
+}

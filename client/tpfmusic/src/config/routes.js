@@ -12,11 +12,11 @@ import { Route, IndexRoute, Router, browserHistory } from "react-router";
 // Reference the high-level components
 import Main from "../components/Main/Main";
 import Search from "../components/Search/Search";
-import Artist from "../components/Artists/Artists";
+import Music from "../components/Music/Music";
 import Shows from "../components/Shows/Shows";
 import Parties from "../components/Parties/Parties";
 import Contact from "../components/Contact/Contact";
-import About from "../components/About/About";
+import Photos from "../components/Photos/Photos";
 //import Saved from "../components/Saved";
 
 // Export the Routes
@@ -27,11 +27,11 @@ export default (
 
             {/* If user selects Search or Saved show the appropriate component */}
             {/*<Route path="Search" component={Search} />*/}
-            <Route path="Artists" component={Artist} />
+            <Route path="Music" component={Music} />
             <Route path="Shows" component={Shows} />
             <Route path="Parties" component={Parties} />
             <Route path="Contact" component={Contact} />
-            <Route path="About" component={About} />
+            <Route path="Photos" component={Photos} />
 
             {/* If user selects any other path... we get the Home Route */}
             {/*<IndexRoute component={Search} />*/}

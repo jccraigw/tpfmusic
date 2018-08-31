@@ -1,5 +1,6 @@
  // Include React as a dependency
 import React, { Component } from 'react'
+import ReactPlayer from 'react-player'
 
 // Include the Query and Results components
 // import Query from "./Search/Query";
@@ -8,8 +9,8 @@ import React, { Component } from 'react'
 // Include the helpers for making API calls
 //import helpers from "../utils/helpers";
 
-// Create the About component
-class About extends Component {
+// Create the Artist component
+class Artist extends Component {
   // Here we set the initial state variables
   // (this allows us to propagate the variables for maniuplation by the children components
   // Also note the "resuls" state. This will be where we hold the data from our results
@@ -35,12 +36,33 @@ class About extends Component {
         {/* Note how we pass the setQuery function to enable Query to perform searches */}
         {/* <Query updateSearch={this.setQuery} />*/}
         {/* Note how we pass in the results into this component */}
-         {/*<Results results={this.state.results} />*/}
-         <h1>********* ABOUT WORKING</h1>
+        {/*<Results results={this.state.results} />*/}
+        <h1>Featured Artist</h1>
+       
+        <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user-512.png" height="100px" width="100px"></img>
+        <h1>Prospect</h1>
+        instagram, facebook, spotify
+        
+        <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user-512.png" height="100px" width="100px"></img>
+        <h1>4am4am</h1>
+        instagram, facebook, spotify
+        <ReactPlayer url='https://soundcloud.com/4am4am' 
+
+            
+            controls="true"
+            config={{
+                youtube: {
+                  playerVars: { showinfo: 1 }
+                },
+                soundcloud: {
+                  color: '#FF69B4'
+                }
+            }} 
+        />
       </div>
     );
   }
 };
 
 // Export the module back to the route
-export default About;
+export default Artist;

@@ -8,8 +8,8 @@ import React, { Component } from 'react'
 // Include the helpers for making API calls
 //import helpers from "../utils/helpers";
 
-// Create the Artist component
-class Artists extends Component {
+// Create the About component
+class About extends Component {
   // Here we set the initial state variables
   // (this allows us to propagate the variables for maniuplation by the children components
   // Also note the "resuls" state. This will be where we hold the data from our results
@@ -36,11 +36,11 @@ class Artists extends Component {
         {/* <Query updateSearch={this.setQuery} />*/}
         {/* Note how we pass in the results into this component */}
          {/*<Results results={this.state.results} />*/}
-         <h1>********* ARTISTS WORKING</h1>
+         <h1>********* Photos WORKING</h1>
       </div>
     );
   }
 };
 
 // Export the module back to the route
-export default Artists;
+export default About;

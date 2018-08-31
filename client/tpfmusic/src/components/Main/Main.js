@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import { Link } from "react-router";
 import './Main.css';
 import Search from "../Search/Search.js";
+import img from '../../img/bg.jpg';
 
 
 // Create the Main component
@@ -14,6 +15,10 @@ class Main extends Component {
             // We can only render a single div. So we need to group everything inside of this main-container one
             <div className="main-container">
                 <div className="container">
+                    <div className="landpage-header">
+                        <strong>PARTY FAVORZ</strong>
+                    </div>
+
                     {/* Navbar */}
                     <nav className="navbar navbar-default">
                         <div className="container-fluid">
@@ -29,31 +34,37 @@ class Main extends Component {
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
                                 </button>
-                                <Link className="navbar-brand" to="/">PartyFavorz</Link>
+                                
                             </div>
                             <div className="collapse navbar-collapse">
                                 <ul className="nav navbar-nav navbar-right">
                                     {/* Using <Link> in place of <a> and "to" in place of "href" */}
                                     {/*<li><Link to="/search">Search</Link></li>*/}
-                                    <li><Link to="/artists">Artists</Link></li>
+                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="/music">Music</Link></li>
                                     <li><Link to="/shows">Shows</Link></li>
                                     <li><Link to="/parties">Parties</Link></li>
+                                    <li><Link to="/photos">Photos</Link></li>
                                     <li><Link to="/contact">Contact</Link></li>
-                                    <li><Link to="/about">AboutUs</Link></li>
                                 </ul>
                             </div>
                         </div>
                     </nav>
 
                     {/* Jumbotron */}
-                    <div className="">
-                        <h2 className="text-center"><strong>PARTY FAVORZ</strong></h2>
-                        <h3 className="text-center">Search and register for parties and info.</h3>
+                    <div className="main-body-container">
+                        
+                        {/* Here we will deploy the sub components (Search or Saved */}
+                        {/* These sub-components are getting passed as this.props.children */}
+                        <div className="carousel">
+                            
+                        </div>
+                         <div className="lastestMusic">
+                            
+                        </div>
+                        {this.props.children}
                     </div>
-                    {/* Here we will deploy the sub components (Search or Saved */}
-                    {/* These sub-components are getting passed as this.props.children */}
-                    {}
-                    {this.props.children}
+
                     <footer>
                         <hr />
                         <p className="pull-right">
