@@ -66,10 +66,7 @@ class Main extends Component {
                     </div>
 
                     <footer>
-                        <hr />
-                        <p className="pull-right">
                             Proudly built by @JDOTGRAHAM
-                        </p>
                     </footer>
                 </div>
             </div>

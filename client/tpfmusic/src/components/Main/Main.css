@@ -1,3 +1,7 @@
+*{
+    /*border: 1px solid red;*/
+}
+
 .container{
     padding-left: 0px;
     padding-right: 0px;
@@ -22,6 +26,7 @@
     }
 }
 .main-body-container{
+
     margin-left: auto;
     margin-right: auto;
     background-color: #333;
@@ -62,6 +67,7 @@
     background-color: #000000;
     opacity: .9;
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 .landpage-header{
     color:#ffffff;
@@ -71,5 +77,15 @@
     font-size: 35px;
     height: 100px;
     line-height: 100px;
+    vertical-align: middle;
+}
+footer{
+    
+    background-color: #000000;
+    color:#ffffff;
+    height: 50px;
+    opacity: 1;
+    text-align: center;
+    line-height: 50px;
     vertical-align: middle;
 }
