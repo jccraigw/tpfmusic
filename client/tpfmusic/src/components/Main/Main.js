@@ -5,8 +5,15 @@ import React, { Component } from 'react'
 import { Link } from "react-router";
 import './Main.css';
 import Search from "../Search/Search.js";
-import img from '../../img/bg.jpg';
-
+import logo from '../../img/logo.jpg';
+import ReactPlayer from 'react-player';
+import { FaEnvelope } from 'react-icons/fa';
+import { FaFacebookF } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import { FaSpotify } from 'react-icons/fa';
+import { FaApple } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 
 // Create the Main component
 class Main extends Component {
@@ -16,12 +23,14 @@ class Main extends Component {
             <div className="main-container">
                 <div className="container">
                     <div className="landpage-header">
-                        <strong>PARTY FAVORZ</strong>
+                        <strong><img src={logo} alt="logo" width="400px" height=""/></strong>
                     </div>
 
                     {/* Navbar */}
                     <nav className="navbar navbar-default">
+
                         <div className="container-fluid">
+
                             <div className="navbar-header">
                                 <button
                                     type="button"
@@ -37,7 +46,16 @@ class Main extends Component {
                                 
                             </div>
                             <div className="collapse navbar-collapse">
+                                <div className="socialIcons">
+                                    <a><FaFacebookF /></a>
+                                    <a><FaInstagram /></a>
+                                    <a><FaSpotify /></a>
+                                    <a><FaApple /></a>
+                                    <a><FaTwitter /></a>
+                                    <a><FaEnvelope /></a>
+                                </div>
                                 <ul className="nav navbar-nav navbar-right">
+
                                     {/* Using <Link> in place of <a> and "to" in place of "href" */}
                                     {/*<li><Link to="/search">Search</Link></li>*/}
                                     <li><Link to="/">Home</Link></li>
@@ -47,6 +65,9 @@ class Main extends Component {
                                     <li><Link to="/photos">Photos</Link></li>
                                     <li><Link to="/contact">Contact</Link></li>
                                 </ul>
+                                <div className="login">
+                                    <a><FaUser /> Login</a>
+                                </div>
                             </div>
                         </div>
                     </nav>
@@ -60,7 +81,24 @@ class Main extends Component {
                             
                         </div>
                          <div className="lastestMusic">
-                            
+                            <div className="sectionHeader">
+                                Latest Music 
+                            </div>
+                            <div className="playerContainer">
+                                <ReactPlayer url='https://soundcloud.com/4am4am/lush-feat-megiapa' 
+
+                
+                                    controls="true"
+                                    config={{
+                                        youtube: {
+                                          playerVars: { showinfo: 1 }
+                                        },
+                                        soundcloud: {
+                                          color: '#FF69B4'
+                                        }
+                                    }} 
+                                />
+                            </div>
                         </div>
                         {this.props.children}
                     </div>
