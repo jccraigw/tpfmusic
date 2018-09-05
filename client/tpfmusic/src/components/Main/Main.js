@@ -99,6 +99,10 @@ class Main extends Component {
                                     }} 
                                 />
                             </div>
+                            <div className="lastestMusicText">
+                                <h1>\\\ IV-AM \\\</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum orci nulla, ut gravida est consequat porta. In nulla justo, eleifend eget elit id, aliquam congue velit. Duis vehicula, ante nec blandit sollicitudin, dolor mi dignissim quam, vel interdum ipsum libero et ex. Maecenas ut dapibus lorem. Vestibulum fermentum dapibus dui, volutpat malesuada ex tristique ac. Suspendisse id aliquam ex, fermentum mattis enim. Sed eget lobortis ligula. Duis ullamcorper mi ipsum, in tincidunt sem placerat non. Integer imperdiet a urna eget commodo.</p>
+                            </div>
                         </div>
                         {this.props.children}
                     </div>

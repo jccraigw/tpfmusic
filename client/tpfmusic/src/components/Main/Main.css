@@ -167,6 +167,20 @@ a:active {color:#fad6a5;}  /* selected link */
     margin-left: 55px;
     margin-top: 65px;
 }
+.lastestMusicText{
+    float: right;
+    margin-right: 50px;
+    display: inline-block;
+    width: 350px;
+    margin-top: -385px;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: italic;
+    color: #ccc;
+    -webkit-font-smoothing: antialiased;
+
+}
 footer{
     
     background-color: #000000;
