@@ -1,7 +1,11 @@
 *{
    /* border: 1px solid red;*/
 }
+.body{
+    padding:0px;
+    margin:0px;
 
+}
 .container{
     padding-left: 0px;
     padding-right: 0px;
@@ -9,6 +13,8 @@
     margin-left: 0px;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+
 }
 @media (min-width: 768px){
     .navbar {
@@ -52,15 +58,19 @@
     margin-left: auto;
     margin-right: auto;
     background-color: #333;
-    margin-top: -21px;
+    margin-top: 40px;
     height: 100%;
     /* The image used */
-/*    background-image: url('https://images.unsplash.com/photo-1529432337323-223e988a90fb?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=liliana-pereira-708261-unsplash.jpg&s=6d5c8bfe7321372af3869922629d026e,');
-*/
+   /* background-image: url('https://images.unsplash.com/photo-1529432337323-223e988a90fb?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=liliana-pereira-708261-unsplash.jpg&s=6d5c8bfe7321372af3869922629d026e,');*/
+
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.logoBackground{
+    background-color: #000000;
+    width: 100%;
 }
 .navbar{
     width:100%;
@@ -71,21 +81,31 @@
     min-height: 40px;
     letter-spacing: .2em;
     font-size: 11px;
+    position: fixed !important;
+/*    top: 0px;*/
+    z-index: 1 !important;
+    
+}
+.navbarWrapper{
+/*    min-height: 40px;
+    position: fixed;*/
 
-
-
-/*    position:fixed;
-    top:0px;*/
 
 }
+
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+
 .carousel{
     margin: 0 auto;
     width: 90%;
-    height: 500px;
+    height: 490px;
     background-color: #000000;
     opacity: .9;
     top:50px;
     border-bottom: 1px solid #333;
+    border-radius: 2px;
 
 
 }
@@ -123,7 +143,7 @@ a:active {color:#fad6a5;}  /* selected link */
     letter-spacing: .2em;
     font-size: 10px;
     margin-top: 3px;
-    t
+
 
 
     display: inline-block;
@@ -131,11 +151,12 @@ a:active {color:#fad6a5;}  /* selected link */
 .lastestMusic{
     margin: 0 auto;
     width: 90%;
-    height: 600px;
+    height: 490px;
     background-color: #000000;
     opacity: .9;
     margin-top: 50px;
     margin-bottom: 100px;
+    border-radius: 2px;
 }
 .landpage-header{
     color:#ffffff;
@@ -146,9 +167,19 @@ a:active {color:#fad6a5;}  /* selected link */
     height: 100px;
     line-height: 100px;
     vertical-align: middle;
+/*    position: fixed;*/
+    top: 0px;
+    z-index: 1;
+    width: 100%;
 }
 .landpage-header img{
-    margin-top: -60px;
+    margin-top: -10px;
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+    width: 100%;
+
 }
 .sectionHeader{
     color:#ffffff;
@@ -169,10 +200,10 @@ a:active {color:#fad6a5;}  /* selected link */
 }
 .lastestMusicText{
     float: right;
-    margin-right: 50px;
+    margin-right: 100px;
     display: inline-block;
     width: 350px;
-    margin-top: -385px;
+    margin-top: -285px;
     line-height: 1.5;
     font-size: 14px;
     font-weight: 100;
@@ -181,8 +212,75 @@ a:active {color:#fad6a5;}  /* selected link */
     -webkit-font-smoothing: antialiased;
 
 }
+
+.getUpdatesWrapper{
+    margin: 0 auto;
+    width: 90%;
+    height: 350px;
+    background-color: #000000;
+    opacity: .4;
+    margin-top: 100px;
+    border-radius: 2px;
+
+}
+.musicTilesWrapper{
+    margin: 0 auto;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 650px;
+    width: 90%;
+    background-color: #000000;
+    opacity: .9;
+    margin-top: -100px;
+    border-top: 1px solid #333;
+}
+.musicTile{
+    border: 1px solid #333;
+    height: 300px;
+
+    flex-grow: 1;
+    display: flex;
+
+}
+.musicTile img{
+     height: 299px;
+    width: 22.4%;
+    position:absolute;
+    z-index: -1;
+
+
+
+}
+.musicTileFooter{
+/*    border-top: 1px solid red;*/
+    flex-grow: 1;
+    align-self: flex-end;
+    height: 45px;
+    position:relative;
+    z-index: 1;
+    opacity: .5;
+    background-color: #000000;
+
+
+}
+.musicTilesDetailsWrapper{
+    border: 1px solid red;
+    height: 320px;
+    width: 100%;
+    align-self: flex-end;
+    display: flex;
+
+}
+
+.musicTilesDetailsText{
+    border: 1px solid red;
+    flex-grow: 1;
+
+}
+
 footer{
-    
+    border-top: 1px solid #333;
     background-color: #000000;
     color:#ffffff;
     height: 50px;

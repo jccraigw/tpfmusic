@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import { Link } from "react-router";
 import './Main.css';
 import Search from "../Search/Search.js";
-import logo from '../../img/logo.jpg';
+import logo from '../../img/logo2.jpg';
 import ReactPlayer from 'react-player';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaFacebookF } from 'react-icons/fa';
@@ -14,6 +14,7 @@ import { FaSpotify } from 'react-icons/fa';
 import { FaApple } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
+import Headroom from 'react-headroom'
 
 // Create the Main component
 class Main extends Component {
@@ -22,56 +23,67 @@ class Main extends Component {
             // We can only render a single div. So we need to group everything inside of this main-container one
             <div className="main-container">
                 <div className="container">
-                    <div className="landpage-header">
-                        <strong><img src={logo} alt="logo" width="400px" height=""/></strong>
-                    </div>
+                    <Headroom style={{
+                      webkitTransition: 'all .5s ease-in-out',
+                      mozTransition: 'all .5s ease-in-out',
+                      oTransition: 'all .5s ease-in-out',
+                      transition: 'all .5s ease-in-out',
+                    }}
 
-                    {/* Navbar */}
-                    <nav className="navbar navbar-default">
+                    >
+                        <div className="landpage-header">
 
-                        <div className="container-fluid">
+                                <strong><img src={logo} alt="logo"/></strong>
 
-                            <div className="navbar-header">
-                                <button
-                                    type="button"
-                                    className="navbar-toggle"
-                                    data-toggle="collapse"
-                                    data-target=".navbar-collapse"
-                                >
-                                <span className="sr-only">Toggle navigation</span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                                </button>
-                                
-                            </div>
-                            <div className="collapse navbar-collapse">
-                                <div className="socialIcons">
-                                    <a><FaFacebookF /></a>
-                                    <a><FaInstagram /></a>
-                                    <a><FaSpotify /></a>
-                                    <a><FaApple /></a>
-                                    <a><FaTwitter /></a>
-                                    <a><FaEnvelope /></a>
-                                </div>
-                                <ul className="nav navbar-nav navbar-right">
-
-                                    {/* Using <Link> in place of <a> and "to" in place of "href" */}
-                                    {/*<li><Link to="/search">Search</Link></li>*/}
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/music">Music</Link></li>
-                                    <li><Link to="/shows">Shows</Link></li>
-                                    <li><Link to="/parties">Parties</Link></li>
-                                    <li><Link to="/photos">Photos</Link></li>
-                                    <li><Link to="/contact">Contact</Link></li>
-                                </ul>
-                                <div className="login">
-                                    <a><FaUser /> Login</a>
-                                </div>
-                            </div>
                         </div>
-                    </nav>
+                        <div className="navbarWrapper">
+                            {/* Navbar */}
+                            <nav className="navbar navbar-default">
 
+                                <div className="container-fluid">
+
+                                    <div className="navbar-header">
+                                        <button
+                                            type="button"
+                                            className="navbar-toggle"
+                                            data-toggle="collapse"
+                                            data-target=".navbar-collapse"
+                                        >
+                                        <span className="sr-only">Toggle navigation</span>
+                                        <span className="icon-bar"></span>
+                                        <span className="icon-bar"></span>
+                                        <span className="icon-bar"></span>
+                                        </button>
+                                        
+                                    </div>
+                                    <div className="collapse navbar-collapse">
+                                        <div className="socialIcons">
+                                            <a><FaFacebookF /></a>
+                                            <a><FaInstagram /></a>
+                                            <a><FaSpotify /></a>
+                                            <a><FaApple /></a>
+                                            <a><FaTwitter /></a>
+                                            <a><FaEnvelope /></a>
+                                        </div>
+                                        <ul className="nav navbar-nav navbar-right">
+
+                                            {/* Using <Link> in place of <a> and "to" in place of "href" */}
+                                            {/*<li><Link to="/search">Search</Link></li>*/}
+                                            <li><Link to="/">Home</Link></li>
+                                            <li><Link to="/music">Music</Link></li>
+                                            <li><Link to="/shows">Shows</Link></li>
+                                            <li><Link to="/parties">Parties</Link></li>
+                                            <li><Link to="/photos">Photos</Link></li>
+                                            <li><Link to="/contact">Contact</Link></li>
+                                        </ul>
+                                        <div className="login">
+                                            <a><FaUser /> Login</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </Headroom>
                     {/* Jumbotron */}
                     <div className="main-body-container">
                         
@@ -89,6 +101,8 @@ class Main extends Component {
 
                 
                                     controls="true"
+                                    width="540px"
+                                    height="260px"
                                     config={{
                                         youtube: {
                                           playerVars: { showinfo: 1 }
@@ -103,12 +117,39 @@ class Main extends Component {
                                 <h1>\\\ IV-AM \\\</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum orci nulla, ut gravida est consequat porta. In nulla justo, eleifend eget elit id, aliquam congue velit. Duis vehicula, ante nec blandit sollicitudin, dolor mi dignissim quam, vel interdum ipsum libero et ex. Maecenas ut dapibus lorem. Vestibulum fermentum dapibus dui, volutpat malesuada ex tristique ac. Suspendisse id aliquam ex, fermentum mattis enim. Sed eget lobortis ligula. Duis ullamcorper mi ipsum, in tincidunt sem placerat non. Integer imperdiet a urna eget commodo.</p>
                             </div>
+                        </div >
+                        <div className="musicTilesWrapper">
+                            <div className="musicTile"><img src="https://via.placeholder.com/288x248"/><div className="musicTileFooter"></div></div>
+                            <div className="musicTile"><img src="https://via.placeholder.com/288x248"/><div className="musicTileFooter"></div></div>
+                            <div className="musicTile"><img src="https://via.placeholder.com/288x248"/><div className="musicTileFooter"></div></div>
+                            <div className="musicTile"><img src="https://via.placeholder.com/288x248"/><div className="musicTileFooter"></div></div>
+                            <div className="musicTilesDetailsWrapper">
+                                <div className="musicTilesDetailsText">
+                                    <h1>\\\ IV-AM \\\</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum orci nulla, ut gravida est consequat porta. In nulla justo, eleifend eget elit id, aliquam congue velit. Duis vehicula, ante nec blandit sollicitudin, dolor mi dignissim quam, vel interdum ipsum libero et ex. Maecenas ut dapibus lorem. Vestibulum fermentum dapibus dui, volutpat malesuada ex tristique ac. Suspendisse id aliquam ex, fermentum mattis enim. Sed eget lobortis ligula. Duis ullamcorper mi ipsum, in tincidunt sem placerat non. Integer imperdiet a urna eget commodo.</p>
+                                </div>
+                                <div className="musicTilesDetailsText">
+                                    <h1>\\\ IV-AM \\\</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum orci nulla, ut gravida est consequat porta. In nulla justo, eleifend eget elit id, aliquam congue velit. Duis vehicula, ante nec blandit sollicitudin, dolor mi dignissim quam, vel interdum ipsum libero et ex. Maecenas ut dapibus lorem. Vestibulum fermentum dapibus dui, volutpat malesuada ex tristique ac. Suspendisse id aliquam ex, fermentum mattis enim. Sed eget lobortis ligula. Duis ullamcorper mi ipsum, in tincidunt sem placerat non. Integer imperdiet a urna eget commodo.</p>
+                                </div>
+                                <div className="musicTilesDetailsText">
+                                    <h1>\\\ IV-AM \\\</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum orci nulla, ut gravida est consequat porta. In nulla justo, eleifend eget elit id, aliquam congue velit. Duis vehicula, ante nec blandit sollicitudin, dolor mi dignissim quam, vel interdum ipsum libero et ex. Maecenas ut dapibus lorem. Vestibulum fermentum dapibus dui, volutpat malesuada ex tristique ac. Suspendisse id aliquam ex, fermentum mattis enim. Sed eget lobortis ligula. Duis ullamcorper mi ipsum, in tincidunt sem placerat non. Integer imperdiet a urna eget commodo.</p>
+                                </div>
+                                <div className="musicTilesDetailsText">
+                                    <h1>\\\ IV-AM \\\</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum orci nulla, ut gravida est consequat porta. In nulla justo, eleifend eget elit id, aliquam congue velit. Duis vehicula, ante nec blandit sollicitudin, dolor mi dignissim quam, vel interdum ipsum libero et ex. Maecenas ut dapibus lorem. Vestibulum fermentum dapibus dui, volutpat malesuada ex tristique ac. Suspendisse id aliquam ex, fermentum mattis enim. Sed eget lobortis ligula. Duis ullamcorper mi ipsum, in tincidunt sem placerat non. Integer imperdiet a urna eget commodo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="getUpdatesWrapper">
+                            <h1>Updates</h1>
                         </div>
                         {this.props.children}
                     </div>
 
                     <footer>
-                            Proudly built by @JDOTGRAHAM
+                             {/*Proudly built by @JDOTGRAHAM*/}
                     </footer>
                 </div>
             </div>
